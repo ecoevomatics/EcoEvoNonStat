@@ -1,0 +1,27 @@
+---
+title: "Linking evolutionary and ecological theory illuminates non-equilibrium biodiversity"
+header-includes:
+   - \renewcommand{\figurename}{Supplementary Figure}
+   - \renewcommand*{\thesection}{S\arabic{section}}
+output:
+  pdf_document:
+    fig_caption: yes
+    keep_tex: no
+    number_sections: yes
+csl: mec.csl
+bibliography: EcoEvoNonStat.bib
+---
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache = FALSE)
+options(tinytex.clean = FALSE)
+```
+
+This supplement combines a narrative account of how to reproduce the results in the main text as well as additional analyses in support of the conclusions in the main text.
+
+# Reproducibility
+
+
+# References
+
