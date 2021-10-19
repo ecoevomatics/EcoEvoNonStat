@@ -1,0 +1,117 @@
+---
+title: "Linking evolutionary and ecological theory illuminates non-equilibrium biodiversity"
+header-includes:
+   - \usepackage{xr}
+   - \externaldocument{ssadAssociation_supp}
+   - \usepackage{lineno}
+output:
+  pdf_document:
+    fig_caption: yes
+    keep_tex: yes
+    number_sections: no
+csl: mec.csl
+bibliography: EcoEvoNonStat.bib
+---
+
+
+```{r setup, include = FALSE, message = FALSE, warning = FALSE, eval = FALSE}
+knitr::opts_chunk$set(echo = FALSE, cache = FALSE, message = FALSE,
+                      warning = FALSE)
+
+# function for cross-cache lazy loading
+findChunk <- function(key, otherDoc) {
+    f <- file.path(paste(otherDoc, 'cache', sep = '_'), 'latex')
+    
+    allChunk <- list.files(f, pattern = '.RData')
+    
+    thisChunk <- gsub('\\.RData', '', grep(paste0(key, '_'), allChunk, value = TRUE))
+    thisChunk <- file.path(f, thisChunk)
+    
+    return(thisChunk)
+}
+
+# function for cross-doc figure referencing
+refOtherFig <- function(x, otherDoc, prefix = '') {
+    
+}
+
+# load packages
+pkgs <- readLines('RarePlusComMinus_supp_cache/latex/__packages')
+for(p in pkgs) library(p, character.only = TRUE)
+
+# load plotting defaults
+lazyLoad(findChunk('plot_defaults', 'RarePlusComMinus_supp'))
+figW <- figH <- 3.5
+knitr::opts_chunk$set(fig.width = figW, fig.height = figH, fig.align = 'center')
+
+# load threading defaults
+lazyLoad(findChunk('threading', 'RarePlusComMinus_supp'))
+```
+
+\linenumbers
+
+> ### Abstract
+
+> Whether or not biodiversity dynamics tend toward stable equilibria remains an unsolved question in ecology and evolution with important implications for our understanding of diversity and its conservation. Phylo/population genetic models and macroecological theory represent two primary lenses through which we view biodiversity. While phylo/population genetics provide an averaged view of changes in demography and diversity over timescales of generations to geological epochs, macroecology provides an ahistorical description of commonness and rarity across contemporary co-occurring species. Our goal is leverage advances in community-wide high throughput sequencing technology, specifically metabarcoding, to combine evolutionary and macroecological approaches to gain novel insights into the non-equilibrium nature of biodiversity.  We help guide near future research with a call for bioinformatic advances and an outline of quantitative predictions made possible by our approach.
+\newline
+\newline
+
+
+# Non-equilibrium, inference, and theory in ecology and evolution
+
+The idea of an ecological and evolutionary equilibrium has pervaded
+studies of biodiversity from geological to ecological, and from global
+to local [@sepkoski1984; @rabosky2009; @hubbell2001; @harte2011; @chesson2000; @tilman2004]. The consequences of non-equilibrium
+dynamics for biodiversity are not well understood and the need to
+understand them is critical with anthropogenic pressures forcing
+biodiversity into states of rapid transition
+[@blonder2015]. Non-equilibrial processes could profoundly inform
+conservation in ways only just beginning to be explored
+[@wallington2005].
+
+Biodiversity theories based on assumptions of equilibrium, both
+mechanistic [@hubbell2001; @chesson2000; @tilman2004] and
+statistical **(see the Glossary)** [@harte2011; @pueyo2007]
+have found success in predicting ahistorical patterns of diversity
+such as the species abundance distribution [@white2012; @hubbell2001; @harte2011] and the species area relationship
+[@hubbell2001; @harte2011]. These theories assume a
+macroscopic equilibrium in terms of these coarse-grained metrics, as
+opposed to focusing on details of species identity (such as
+in @blonder2015), although macroscopic and microscopic approaches
+are not mutually exclusive.  Nonetheless, the equilibrium assumed by
+these theories is not realistic [@ricklefs2006], and many
+processes, equilibrial or otherwise, can generate the same
+macroscopic, ahistorical predictions [@mcgill2007].
+
+Tests of equilibrial ecological theory alone will not allow us to
+identify systems out of equilibrium, nor permit us to pinpoint the
+mechanistic causes of any non-equilibrial processes. The dynamic
+natures of evolutionary innovation and landscape change suggest that
+ecological theory could be greatly enriched by synthesizing its
+insights with inference from population genetic theory that explicitly
+accounts for history. This would remedy two shortfalls of equilibrial
+theory: 1) if theory fits observed ahistorical patterns but the
+implicit dynamical assumptions were wrong, we would make the wrong
+conclusion about the equilibrium of the system; 2) if theories do not
+fit the data we cannot know why unless we have a perspective on the
+temporal dynamics underlying those data.
+
+No efforts to date have tackled these challenges. We propose that
+combining insights from ecological theory and inference of
+evolutionary and demographic change from genetic data will allow us to
+understand and predict the consequences of non-equilibrial processes
+in governing the current and future states of ecological
+assemblages. The advent of high throughput sequencing-enabled metabarcoding has made unprecedented data available about the biodiversity of lineages from microbes to arthropods [@taberlet2012; @gibson2014; @shokralla2015; @ji2013; @zhou2013; @bohmann2014; @linard2015; @leray2015; @dodsworth2015; @liu2016; @venkataraman2015]. These metabarcoding data have great potential to yield synthetic insight across ecology and evolution.  However, to draw such insights we need a new tool set of bioinformatic methods **(Box box:dry)** and meaningful predictions **(section ref sec:pred )** grounded in theory to make use of those data. We present the foundation of this methedological tool set here.
+
+
+
+
+## Data and Code Availability
+
+All data and code needed to reproduce the results of this manuscript are available at https://github.com/ajrominger/EcoEvoNonStat and a detailed description of the analytical approach is available in the supplement.
+
+
+\clearpage
+
+# References
+
