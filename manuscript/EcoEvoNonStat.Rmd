@@ -2,7 +2,7 @@
 title: "Linking evolutionary and ecological theory illuminates non-equilibrium biodiversity"
 header-includes:
    - \usepackage{xr}
-   - \externaldocument{ssadAssociation_supp}
+   - \externaldocument{EcoEvoNonStat_supp}
    - \usepackage{lineno}
 output:
   pdf_document:
@@ -102,6 +102,71 @@ evolutionary and demographic change from genetic data will allow us to
 understand and predict the consequences of non-equilibrial processes
 in governing the current and future states of ecological
 assemblages. The advent of high throughput sequencing-enabled metabarcoding has made unprecedented data available about the biodiversity of lineages from microbes to arthropods [@taberlet2012; @gibson2014; @shokralla2015; @ji2013; @zhou2013; @bohmann2014; @linard2015; @leray2015; @dodsworth2015; @liu2016; @venkataraman2015]. These metabarcoding data have great potential to yield synthetic insight across ecology and evolution.  However, to draw such insights we need a new tool set of bioinformatic methods **(Box box:dry)** and meaningful predictions **(section ref sec:pred )** grounded in theory to make use of those data. We present the foundation of this methedological tool set here.
+
+
+# Ecological theories and non-equilibrium
+
+Neutral and statistical theories in ecology focus on macroscopic
+patterns, and equilibrium is presumed to be relevant to those
+patterns. Our goal throughout is not to validate neutral or statistical
+theories---quite the opposite, we propose new data dimensions, namely
+genetics, to help better test alternative hypotheses against these
+null theories, thereby gaining insight into what non-neutral and
+non-statistical mechanisms are at play in systems of interest.
+
+<!-- what to do about non-neutral models? here (until next comment tag) we say they drive non-equlibrium, below we say they're consistent with stat mech at large scale -->
+Non-neutral and non-statistical models (e.g., @tilman2004; @chesson2000) also invoke ideas of equilibrium in their
+derivation. However, these equilibria focus on the micro-scale details
+of species interactions, which could in fact lead to instability and non-equilibrium at larger scales (cite: romGEB, critical transition in food web stuff from Beth, random matrix theory). Thus, detailed species interactions could in fact be drivers of non-equilibrium and thus
+interesting hypotheses to test as alternatives to neutral/statistical models.
+<!-- end of comment section  -->
+
+To use neutral/statistical theories as null models, we need a robust measure of
+goodness of fit. The emerging consensus is that likelihood-based test
+statistics should be preferred [@baldridge2016]. The "exact
+test" of @etienne2007 has been extended by @meteR into a simple z-score which can parsimoniously
+describe the goodness of fit between theory and pattern.  We advocate
+its use in our proposed framework.
+
+<!-- consider moving below sections (down to comment tag 'theory_background') to earlier in intro (as a way to avoid using boxes/glossary all together) -->
+
+The unified neutral theory of biodiversity (UNTB) [@hubbell2001] is a
+useful null because it assumes that one mechanism---demographic
+drift---drives community assembly.  Equilibrium occurs when
+homogeneous stochastic processes of birth, death, speciation and
+immigration have reached stationarity. Thus neutrality in ecology is
+analogous to neutral drift in population genetics [@hubbell2001] (also cite molecular neutral theory).
+
+Rather than assuming any one mechanism dominates the assembly of
+populations into a community, statistical theories assume all
+mechanisms could be valid, but their unique influences have been lost to
+the enormity of the system and thus the outcome of assembly is a
+community in statistical equilibrium [@harte2011; pueyo2007]. The
+mechanistic agnosticism is what makes statistical theories useful
+nulls. These statistical theories are also consistent with niche-based
+equilibria [@pueyo2007; @neill2009] if the complicated, individual or
+population level models with many mechanistic drivers were to be
+upscaled to entire communities.
+
+The maximum entropy theory of ecology (METE) [@harte2011]
+derives its predictions by condensing the many bits of mechanistic
+information down into ecological state variables and then
+mathematically maximizing information entropy conditional on those
+state variables. METE can predict multiple ahistorical patterns,
+including distributions of species abundance, body size, spatial
+aggregation, and trophic links [@harte2011; @rominger2015; @meteR], making
+for a stronger null theory [@mcgill2003]. However, multiple
+dynamics can still map to this handful of metrics [@mcgill2007]
+and while extensive testing often supports METE's predictions
+[@harte2011; white2012; xiao2015] at single snapshots in time,
+METE fails to match observed patterns in disturbed and rapidly
+evolving communities [@rominger2015; harte2011]. Just like deviations from UNTB, we cannot know the cause of these departures from theoretical predictions without adding tests of theories and metrics that capture temporal dynamics.
+
+<!-- end of comment section 'theory_background'-->
+
+
+
+
 
 
 
