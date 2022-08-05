@@ -7,7 +7,7 @@ This repo supports the manuscript "Linking evolutionary and ecological theory il
 To install the R package in this repo and re-produce the results run this R code:
 
 ```
-devtools::install_github('ajrominger/EcoEvoNonStat')
+devtools::install_github('EcoEvoNonStat/EcoEvoNonStat')
 ```
 
 You might need to first install the *devtools* package from CRAN.
