@@ -165,10 +165,163 @@ evolving communities [@rominger2015; harte2011]. Just like deviations from UNTB,
 <!-- end of comment section 'theory_background'-->
 
 
+# Inferring non-equilibrium dynamics
+
+Unlocking insight into the dynamics underlying community assembly is
+key to overcoming the limitations of analyzing ahistorical patterns
+with equilibrial theory. While the fossil record could be used for
+this task, it has limited temporal, spatial, and taxonomic
+resolution. Here we instead focus on population/phylogenetic insights
+into rates of change of populations and species because while there are real limitations in the accuracy and resolution of temporal dynamics with population genetic (cite) and phylogenetic (cite) methods, they can, in principle, be applied to any extant group. Additionally, despite limitations in resolving detailed temporal dynamics, robust metrics of deviation from simple, stationary birth-death and/or speciation-extinction processes have been well-established and widely used for population genetic and phylogenetic data (cite about Tajima D, gamma stats, etc). 
 
 
+<!-- Do we need this? -->
+
+<!-- Bridging ecological theory -->
+<!-- with models from population/phylogenetics has great potential -->
+<!-- \citep{webb2002, lavergne2010, mcgaughran2015, laroche2015, -->
+<!--   papadopoulou2011, dexter2012} that has yet to be fully realized. How -->
+<!-- we can best link the inferences of change through time from -->
+<!-- population/phylogenetics with inferences from macroecology is governed -->
+<!-- by what insights we can gain from genetic perspectives on demography -->
+<!-- and diversification. -->
+
+<!-- Coalescent theory \citep{kingman1982stochasti, rosenberg2002} is one -->
+<!-- of the fundamental population genetics tools allowing model-based -->
+<!-- estimation of complex historical processes. These include population -->
+<!-- size fluctuations \citep{kuhner1998}, divergence and/or colonization -->
+<!-- times \citep{charlesworth2010, edwards2000}, migration rates -->
+<!-- \citep{wakeley2008}, selection \citep{kern2016}, and complex patterns -->
+<!-- of historical population structure \citep{prado-martinez2013} and gene -->
+<!-- flow \citep{beerli2001, hey2004}. This approach can also be put in a -->
+<!-- multi-species, community context via hierarchical demographic models -->
+<!-- \citep{xue2015, hickerson2006, carstens2016, chan2014}, even when only -->
+<!-- small numbers of genetic loci are sampled from populations -->
+<!-- \citep{drummond2005}. -->
+
+<!-- These modeled demographic deviations from neutral demographic -->
+<!-- equilibrium can also be condensed into multi-species summary -->
+<!-- statistics. For example, Tajima's D, which measures the strength of -->
+<!-- non-equilibrium demography in a single population \citep[see Glossary -->
+<!-- for more details;][]{tajima1989, jensen2005, schrider2016, -->
+<!--   stephan2016}, could be averaged over all populations in a sample. -->
 
 
+# Current efforts to integrate evolution into ecological theory
+
+While quantitatively integrating theory from ecology, population
+genetics, and phylogenetics has not yet been achieved, existing
+efforts to synthesize perspectives from evolution and ecology point
+toward promising directions despite being hindered by one or more
+general issues: 1) lack of a solid theoretical foundation, 2)
+inability to distinguish multiple competing alternative hypotheses, 3)
+lack of comprehensive genetic/genomic data, and 4) lack of
+bioinformatic approaches to resolve species and their abundances with high throughput sequencing data.
+
+Phylogenetic information has been incorporated into studies of the UNTB
+to better understand its ultimate equilibrium [@jabot2009; @burbrink2015].  However, phylogenetic reasoning also points out the
+flaws in the UNTB's presumed equilibrium [@ricklefs2006].
+Attempts to correct the assumed dynamics of UNTB through "protracted
+speciation" [@rosindell2010] are promising, and while their
+implications for diversification have been considered
+[@etienne2011], these predictions have not been integrated with
+demographic and phylogeographic approaches
+(e.g., [@charlesworth2010; @edwards2000; @prado-martinez2013])
+that have the potential to validate or falsify presumed mechanisms of
+lineage divergence.  Such demographic studies, particularly
+phylogeographic investigations of past climate change, have highlighted the non-equilibrium
+responses of specific groups to perturbations [@smith2012; @hickerson2005], but no attempt has been made to scale up these
+observations to implications at the level of entire communities. The
+recent growth in joint studies of genetic and species diversity
+[@vellend2005amnat; @papadopoulou2011] have been useful in linking
+population genetics with ecological and biogeographic concepts. 
+
+<!-- I think I want to say something else about correlative gen div and species div -->
+<!-- maybe something about how they're not based in theory? have no theoretical basline? -->
+
+<!-- maybe we don't need this since MESS is already a thing now -->
+<!-- These correlative studies could be bolstered by developing full joint models -->
+<!-- that link community assembly, historical demography and -->
+<!-- coalescent-based population genetics (cite MESS of course). -->
+
+Studies have also used chronosequences or the fossil record in
+combination with neutral and/or statistical theory to investigate
+changes over geologic time in community assembly mechanisms
+[@wagner2006; @rominger2015]. While these
+studies have documented interesting shifts in assembly mechanisms,
+including departures from equilibrium likely resulting from
+evolutionary innovations, understanding exactly how the evolution of
+innovation is responsible for these departures cannot be achieved
+without more concerted integration with insights from evolutionary theory.
+
+
+<!-- This section (below) seems pretty redundant and also builds up MESS (option 2) but MESS  -->
+<!-- is already a thing now. Maybe we should scrap most of this section -->
+
+<!-- Here's what I think we should do: -->
+<!-- - incorperate the many-to-on mapping above (it's already pretty much there) -->
+<!-- - use the description of "Option 1" to write a "here we do" statement -->
+<!-- - borrow *some* content from the "What we gain from this framework" section to embelish the "here we do" statment -->
+
+<!-- # What is needed now -->
+
+
+<!-- A key limitation to using ahistorical theory to infer dynamic -->
+<!-- mechanisms is that multiple mechanisms, from simple and equilibrial to -->
+<!-- complex, can map onto the same ahistorical pattern -->
+<!-- [@engen1996lnorm; @mcgill2003]. This means that even when a theory -->
+<!-- describes the data well, we do not really know the dynamics that led -->
+<!-- to that good fit [@ricklefs2006]. -->
+
+<!-- Quantitatively integrating the dynamics inferred from population and -->
+<!-- phylogenetic approaches with ahistorical, equilibrial ecological -->
+<!-- theory can break this many-to-one mapping of mechanism onto prediction -->
+<!-- and contextualize whether a match between ahistorical pattern and -->
+<!-- theory truly results form equilibrial dynamics or only falsely -->
+<!-- appears to. There are two complementary approaches to achieve this -->
+<!-- integration (both discussed further in **Box ref box:dry**): -->
+
+<!-- - Option 1: using dynamics from genetic inference to predict and -->
+<!--   understand deviations from ahistorical theories. This amounts to -->
+<!--   separately fitting ahistorical theory to typical macroecological -->
+<!--   data, while also fitting population genetic and/or phylogenetic -->
+<!--   models to genetic data captured for the entire community. Doing so -->
+<!--   requires substantial bioinformatic advances that would allow the -->
+<!--   joint capture of genetic or genomic data from entire community -->
+<!--   samples using high throughput sequencing, while also estimating accurate abundances from -->
+<!--   high throughput sequencing output. Separating model fitting avoids assumptions about how -->
+<!--   macroecological quantities like abundance scale to evolutionary -->
+<!--   metrics like effective population size; however, this approach does -->
+<!--   not facilitate the elegance of model comparison as does joint modeling. -->
+<!-- - Option 2: building off existing theories, develop new joint -->
+<!--   models that simultaneously predict macroecological and population -->
+<!--   genetic patterns. This amounts to building hierarchical models that -->
+<!--   take genetic data as input and integrate over all possible community -->
+<!--   states that could lead to these genetic data given a model of -->
+<!--   community assembly and a model of population coalescence. This -->
+<!--   approach requires making assumptions about how abundances scale to -->
+<!--   effective population sizes, but is better suited for comparing -->
+<!--   competing joint models of evolutionary history and assembly. -->
+
+
+<!-- \subsection{What we gain from this framework} -->
+
+<!-- Using our proposed framework, we can finally understand why -->
+<!-- ahistorical theories fail when they do---is it because of rapid -->
+<!-- population change, or evolution/long-distance dispersal of novel -->
+<!-- ecological strategies? We could predict whether a system that obeys -->
+<!-- the ahistorical predictions of equilibrial ecological theory is in -->
+<!-- fact undergoing major non-equilibrial evolution. We could better -->
+<!-- understand and forecast how/if systems out of equilibrium are likely -->
+<!-- to relax back to equilibrial patterns. With such a framework we could -->
+<!-- even flip the direction of causal inference and understand ecological -->
+<!-- drivers of diversification dynamics. This last point bears directly on -->
+<!-- long-standing debates about the importance of competitive limits on -->
+<!-- diversification \citep{rabosky2009, harmon2015amNat}. Conclusions about -->
+<!-- phylogenetic patterns (e.g. diversification slowdowns) would be more -->
+<!-- believable and robust if combined with population genetic inference -->
+<!-- (e.g. declining populations) and community patterns (e.g.  deviation -->
+<!-- from equilibrium). -->
 
 
 ## Data and Code Availability
