@@ -4,3 +4,8 @@
 .Ruserdata
 .DS_Store
 Icon?
+EcoEvoNonStat.Rcheck/
+EcoEvoNonStat*.tar.gz
+EcoEvoNonStat*.tgz
+.Rbuildignore
+*.log

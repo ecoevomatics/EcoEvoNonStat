@@ -326,7 +326,7 @@ without more concerted integration with insights from evolutionary theory.
 
 ## Data and Code Availability
 
-All data and code needed to reproduce the results of this manuscript are available at https://github.com/ajrominger/EcoEvoNonStat and a detailed description of the analytical approach is available in the supplement.
+All data and code needed to reproduce the results of this manuscript are available at https://github.com/ecoevomatics/EcoEvoNonStat and a detailed description of the analytical approach is available in the supplement.
 
 
 \clearpage
