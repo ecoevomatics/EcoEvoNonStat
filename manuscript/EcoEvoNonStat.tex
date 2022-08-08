@@ -6,8 +6,8 @@
 ]{article}
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{ifxetex,ifluatex}
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+\usepackage{iftex}
+\ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
@@ -58,25 +58,22 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
-\usepackage{xr}
-\externaldocument{EcoEvoNonStat_supp}
-\usepackage{lineno}
-\ifluatex
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newlength{\csllabelwidth}
 \setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
 \newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
  {% don't indent paragraphs
   \setlength{\parindent}{0pt}
   % turn on hanging indent if param 1 is 1
-  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
-  % set entry spacing
-  \ifnum #2 > 0
-  \setlength{\parskip}{#2\baselineskip}
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
   \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
  }%
  {}
 \usepackage{calc}
@@ -84,6 +81,12 @@
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\usepackage{xr}
+\externaldocument{EcoEvoNonStat_supp}
+\usepackage{lineno}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
 
 \title{Linking evolutionary and ecological theory illuminates
 non-equilibrium biodiversity}
@@ -245,6 +248,69 @@ deviations from UNTB, we cannot know the cause of these departures from
 theoretical predictions without adding tests of theories and metrics
 that capture temporal dynamics.
 
+\hypertarget{inferring-non-equilibrium-dynamics}{%
+\section{Inferring non-equilibrium
+dynamics}\label{inferring-non-equilibrium-dynamics}}
+
+Unlocking insight into the dynamics underlying community assembly is key
+to overcoming the limitations of analyzing ahistorical patterns with
+equilibrial theory. While the fossil record could be used for this task,
+it has limited temporal, spatial, and taxonomic resolution. Here we
+instead focus on population/phylogenetic insights into rates of change
+of populations and species because while there are real limitations in
+the accuracy and resolution of temporal dynamics with population genetic
+(cite) and phylogenetic (cite) methods, they can, in principle, be
+applied to any extant group. Additionally, despite limitations in
+resolving detailed temporal dynamics, robust metrics of deviation from
+simple, stationary birth-death and/or speciation-extinction processes
+have been well-established and widely used for population genetic and
+phylogenetic data (cite about Tajima D, gamma stats, etc).
+
+\hypertarget{current-efforts-to-integrate-evolution-into-ecological-theory}{%
+\section{Current efforts to integrate evolution into ecological
+theory}\label{current-efforts-to-integrate-evolution-into-ecological-theory}}
+
+While quantitatively integrating theory from ecology, population
+genetics, and phylogenetics has not yet been achieved, existing efforts
+to synthesize perspectives from evolution and ecology point toward
+promising directions despite being hindered by one or more general
+issues: 1) lack of a solid theoretical foundation, 2) inability to
+distinguish multiple competing alternative hypotheses, 3) lack of
+comprehensive genetic/genomic data, and 4) lack of bioinformatic
+approaches to resolve species and their abundances with high throughput
+sequencing data.
+
+Phylogenetic information has been incorporated into studies of the UNTB
+to better understand its ultimate equilibrium (Jabot \& Chave 2009;
+Burbrink \emph{et al.} 2015). However, phylogenetic reasoning also
+points out the flaws in the UNTB's presumed equilibrium (Ricklefs 2006).
+Attempts to correct the assumed dynamics of UNTB through ``protracted
+speciation'' (Rosindell \emph{et al.} 2010) are promising, and while
+their implications for diversification have been considered (Etienne \&
+Rosindell 2011), these predictions have not been integrated with
+demographic and phylogeographic approaches (e.g., (Edwards \& Beerli
+2000; Charlesworth 2010; Prado-Martinez \emph{et al.} 2013)) that have
+the potential to validate or falsify presumed mechanisms of lineage
+divergence. Such demographic studies, particularly phylogeographic
+investigations of past climate change, have highlighted the
+non-equilibrium responses of specific groups to perturbations (Hickerson
+\& Cunningham 2005; Smith \emph{et al.} 2012), but no attempt has been
+made to scale up these observations to implications at the level of
+entire communities. The recent growth in joint studies of genetic and
+species diversity (Vellend 2005; Papadopoulou \emph{et al.} 2011) have
+been useful in linking population genetics with ecological and
+biogeographic concepts.
+
+Studies have also used chronosequences or the fossil record in
+combination with neutral and/or statistical theory to investigate
+changes over geologic time in community assembly mechanisms (Wagner
+\emph{et al.} 2006; Rominger \emph{et al.} 2015). While these studies
+have documented interesting shifts in assembly mechanisms, including
+departures from equilibrium likely resulting from evolutionary
+innovations, understanding exactly how the evolution of innovation is
+responsible for these departures cannot be achieved without more
+concerted integration with insights from evolutionary theory.
+
 \hypertarget{data-and-code-availability}{%
 \subsection{Data and Code
 Availability}\label{data-and-code-availability}}
@@ -262,144 +328,206 @@ supplement.
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
-\leavevmode\hypertarget{ref-baldridge2016}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-baldridge2016}{}}%
 Baldridge E, Harris DJ, Xiao X, White EP (2016) An extensive comparison
 of species-abundance distribution models. \emph{PeerJ}, \textbf{4},
 e2823.
 
-\leavevmode\hypertarget{ref-blonder2015}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-blonder2015}{}}%
 Blonder B, Nogués-Bravo D, Borregaard MK, \emph{et al.} (2015) Linking
 environmental filtering and disequilibrium to biogeography with a
 community climate framework. \emph{Ecology}, \textbf{96}, 972--985.
 
-\leavevmode\hypertarget{ref-bohmann2014}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-bohmann2014}{}}%
 Bohmann K, Evans A, Gilbert MTP, \emph{et al.} (2014) Environmental DNA
 for wildlife biology and biodiversity monitoring. \emph{Trends in
 Ecology \& Evolution}, \textbf{29}, 358--367.
 
-\leavevmode\hypertarget{ref-chesson2000}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-burbrink2015}{}}%
+Burbrink FT, McKelvy AD, Pyron RA, Myers EA (2015) Predicting community
+structure in snakes on eastern nearctic islands using ecological neutral
+theory and phylogenetic methods. \emph{Proceedings of the Royal Society
+B: Biological Sciences}, \textbf{282}, 20151700.
+
+\leavevmode\vadjust pre{\hypertarget{ref-charlesworth2010}{}}%
+Charlesworth D (2010) Don't forget the ancestral polymorphisms.
+\emph{Heredity}, \textbf{105}, 509--510.
+
+\leavevmode\vadjust pre{\hypertarget{ref-chesson2000}{}}%
 Chesson P (2000) Mechanisms of maintenance of species diversity.
 \emph{Annu. Rev. Ecol. Syst.}, \textbf{31}, 343--366.
 
-\leavevmode\hypertarget{ref-dodsworth2015}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-dodsworth2015}{}}%
 Dodsworth S (2015) Genome skimming for next-generation biodiversity
 analysis. \emph{Trends in plant science}, \textbf{20}, 525--527.
 
-\leavevmode\hypertarget{ref-etienne2007}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-edwards2000}{}}%
+Edwards SV, Beerli P (2000) Perspective: Gene divergence, population
+divergence, and the variance in coalescence time in phylogeographic
+studies. \emph{Evolution}, \textbf{54}, 1839--1854.
+
+\leavevmode\vadjust pre{\hypertarget{ref-etienne2007}{}}%
 Etienne RS (2007) A neutral sampling formula for multiple samples and an
 'exact' test of neutrality. \emph{Ecology letters}, \textbf{10},
 608--618.
 
-\leavevmode\hypertarget{ref-gibson2014}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-etienne2011}{}}%
+Etienne RS, Rosindell J (2011) Prolonging the past counteracts the pull
+of the present: Protracted speciation can explain observed slowdowns in
+diversification. \emph{Systematic Biology}, syr091.
+
+\leavevmode\vadjust pre{\hypertarget{ref-gibson2014}{}}%
 Gibson J, Shokralla S, Porter TM, \emph{et al.} (2014) Simultaneous
 assessment of the macrobiome and microbiome in a bulk sample of tropical
 arthropods through DNA metasystematics. \emph{Proceedings of the
 National Academy of Sciences}, \textbf{111}, 8007--8012.
 
-\leavevmode\hypertarget{ref-harte2011}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-harte2011}{}}%
 Harte J (2011) \emph{The maximum entropy theory of ecology}. Oxford
 University Press.
 
-\leavevmode\hypertarget{ref-hubbell2001}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-hickerson2005}{}}%
+Hickerson MJ, Cunningham CW (2005) Contrasting quaternary histories in
+an ecologically divergent pair of low-dispersing intertidal fish
+(xiphister) revealed by multi-locus {DNA} analysis. \emph{Evolution},
+\textbf{59}, 344--360.
+
+\leavevmode\vadjust pre{\hypertarget{ref-hubbell2001}{}}%
 Hubbell SP (2001) \emph{The unified neutral theory of biodiversity and
 biogeography}. Princeton University Press.
 
-\leavevmode\hypertarget{ref-ji2013}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-jabot2009}{}}%
+Jabot F, Chave J (2009) Inferring the parameters of the neutral theory
+of biodiversity using phylogenetic information and implications for
+tropical forests. \emph{Ecol. Lett.}, \textbf{12}, 239--248.
+
+\leavevmode\vadjust pre{\hypertarget{ref-ji2013}{}}%
 Ji Y, Ashton L, Pedley SM, \emph{et al.} (2013) Reliable, verifiable and
 efficient monitoring of biodiversity via metabarcoding. \emph{Ecology
 letters}, \textbf{16}, 1245--1257.
 
-\leavevmode\hypertarget{ref-leray2015}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-leray2015}{}}%
 Leray M, Knowlton N (2015) DNA barcoding and metabarcoding of
 standardized samples reveal patterns of marine benthic diversity.
 \emph{Proceedings of the National Academy of Sciences}, \textbf{112},
 2076--2081.
 
-\leavevmode\hypertarget{ref-linard2015}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-linard2015}{}}%
 Linard B, Crampton-Platt A, Gillett CP, Timmermans MJ, Vogler AP (2015)
 Metagenome skimming of insect specimen pools: Potential for comparative
 genomics. \emph{Genome biology and evolution}, \textbf{7}, 1474--1489.
 
-\leavevmode\hypertarget{ref-liu2016}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-liu2016}{}}%
 Liu S, Wang X, Xie L, \emph{et al.} (2016) Mitochondrial capture
 enriches mito-DNA 100 fold, enabling PCR-free mitogenomics biodiversity
 analysis. \emph{Molecular ecology resources}, \textbf{16}, 470--479.
 
-\leavevmode\hypertarget{ref-mcgill2003}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-mcgill2003}{}}%
 McGill B (2003) Strong and weak tests of macroecological theory.
 \emph{Oikos}, \textbf{102}, 679--685.
 
-\leavevmode\hypertarget{ref-mcgill2007}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-mcgill2007}{}}%
 McGill BJ, Etienne RS, Gray JS, \emph{et al.} (2007) Species abundance
 distributions: Moving beyond single prediction theories to integration
 within an ecological framework. \emph{Ecol. Lett.}, \textbf{10},
 995--1015.
 
-\leavevmode\hypertarget{ref-neill2009}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-neill2009}{}}%
 Neill C, Daufresne T, Jones CG (2009) A competitive coexistence
 principle? \emph{Oikos}, \textbf{118}, 1570--1578.
 
-\leavevmode\hypertarget{ref-pueyo2007}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-papadopoulou2011}{}}%
+Papadopoulou A, Anastasiou I, Spagopoulou F, \emph{et al.} (2011)
+Testing the {Species--Genetic} diversity correlation in the aegean
+archipelago: Toward a {Haplotype-Based} macroecology? \emph{Am. Nat.},
+\textbf{178}, 241--255.
+
+\leavevmode\vadjust pre{\hypertarget{ref-prado-martinez2013}{}}%
+Prado-Martinez J, Sudmant PH, Kidd JM, \emph{et al.} (2013) Great ape
+genetic diversity and population history. \emph{Nature}, \textbf{499},
+471--475.
+
+\leavevmode\vadjust pre{\hypertarget{ref-pueyo2007}{}}%
 Pueyo S, He F, Zillio T (2007) The maximum entropy formalism and the
 idiosyncratic theory of biodiversity. \emph{Ecology Letters},
 \textbf{10}, 1017--1028.
 
-\leavevmode\hypertarget{ref-rabosky2009}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-rabosky2009}{}}%
 Rabosky DL (2009) Ecological limits and diversification rate:
 Alternative paradigms to explain the variation in species richness among
 clades and regions. \emph{Ecol. Lett.}, \textbf{12}, 735--743.
 
-\leavevmode\hypertarget{ref-ricklefs2006}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-ricklefs2006}{}}%
 Ricklefs RE (2006) The unified neutral theory of biodiversity: Do the
 numbers add up? \emph{Ecology}, \textbf{87}, 1424--1431.
 
-\leavevmode\hypertarget{ref-rominger2015}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-rominger2015}{}}%
 Rominger AJ, Goodman KR, Lim JY, \emph{et al.} (2015) Community assembly
 on isolated islands: Macroecology meets evolution. \emph{Glob. Ecol.
 Biogeogr.}
 
-\leavevmode\hypertarget{ref-meteR}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-meteR}{}}%
 Rominger AJ, Merow C (2017) meteR: An r package for testing the maximum
 entropy theory of ecology. \emph{Methods in Ecology and Evolution},
 \textbf{8}, 241--247.
 
-\leavevmode\hypertarget{ref-sepkoski1984}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-rosindell2010}{}}%
+Rosindell J, Cornell SJ, Hubbell SP, Etienne RS (2010) Protracted
+speciation revitalizes the neutral theory of biodiversity. \emph{Ecol.
+Lett.}, \textbf{13}, 716--727.
+
+\leavevmode\vadjust pre{\hypertarget{ref-sepkoski1984}{}}%
 Sepkoski JJ (1984) A kinetic model of phanerozoic taxonomic diversity.
 {III}. {Post-Paleozoic} families and mass extinctions.
 \emph{Paleobiology}, \textbf{10}, 246--267.
 
-\leavevmode\hypertarget{ref-shokralla2015}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-shokralla2015}{}}%
 Shokralla S, Porter TM, Gibson JF, \emph{et al.} (2015) Massively
 parallel multiplex DNA sequencing for specimen identification using an
 illumina MiSeq platform. \emph{Scientific reports}, \textbf{5}, 9687.
 
-\leavevmode\hypertarget{ref-taberlet2012}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-smith2012}{}}%
+Smith BT, Amei A, Klicka J (2012) Evaluating the role of contracting and
+expanding rainforest in initiating cycles of speciation across the
+isthmus of panama. \emph{Proc. Biol. Sci.}, \textbf{279}, 3520--3526.
+
+\leavevmode\vadjust pre{\hypertarget{ref-taberlet2012}{}}%
 Taberlet P, Coissac E, Pompanon F, Brochmann C, Willerslev E (2012)
 Towards next-generation biodiversity assessment using DNA metabarcoding.
 \emph{Molecular Ecology}, \textbf{21}, 2045--2050.
 
-\leavevmode\hypertarget{ref-tilman2004}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-tilman2004}{}}%
 Tilman D (2004) Niche tradeoffs, neutrality, and community structure: A
 stochastic theory of resource competition, invasion, and community
 assembly. \emph{Proc. Natl. Acad. Sci. U. S. A.}, \textbf{101},
 10854--10861.
 
-\leavevmode\hypertarget{ref-venkataraman2015}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-vellend2005amnat}{}}%
+Vellend M (2005) Species diversity and genetic diversity: Parallel
+processes and correlated patterns. \emph{Am. Nat.}, \textbf{166},
+199--215.
+
+\leavevmode\vadjust pre{\hypertarget{ref-venkataraman2015}{}}%
 Venkataraman A, Bassis CM, Beck JM, \emph{et al.} (2015) Application of
 a neutral community model to assess structuring of the human lung
 microbiome. \emph{MBio}, \textbf{6}.
 
-\leavevmode\hypertarget{ref-wallington2005}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-wagner2006}{}}%
+Wagner PJ, Kosnik MA, Lidgard S (2006) Abundance distributions imply
+elevated complexity of post-paleozoic marine ecosystems. \emph{Science},
+\textbf{314}, 1289--1292.
+
+\leavevmode\vadjust pre{\hypertarget{ref-wallington2005}{}}%
 Wallington TJ, Hobbs RJ, Moore SA (2005) Implications of current
 ecological thinking for biodiversity conservation: A review of the
 salient issues. \emph{Ecol. Soc.}, \textbf{10}.
 
-\leavevmode\hypertarget{ref-white2012}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-white2012}{}}%
 White EP, Thibault KM, Xiao X (2012) Characterizing species abundance
 distributions across taxa and ecosystems using a simple maximum entropy
 model. \emph{Ecology}, \textbf{93}, 1772--1778.
 
-\leavevmode\hypertarget{ref-zhou2013}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-zhou2013}{}}%
 Zhou X, Li Y, Liu S, \emph{et al.} (2013) Ultra-deep sequencing enables
 high-fidelity recovery of biodiversity for bulk arthropod samples
 without PCR amplification. \emph{Gigascience}, \textbf{2}, 4.
