@@ -8,4 +8,4 @@ EcoEvoNonStat.Rcheck/
 EcoEvoNonStat*.tar.gz
 EcoEvoNonStat*.tgz
 *.Rbuildignore
-*.log
+manuscript/*.log
