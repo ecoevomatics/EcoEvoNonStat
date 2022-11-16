@@ -28,6 +28,31 @@ Particularly in the current era of dramatic and often unprecedented disturbances
 
 ##	Enormity-of-the-system/statistical equilibrium argument for focusing on deviations from statistical null models
 
+<!--A.	equilibrium Equilibrium is often reserved for systems in thermodynamic equilibrium— which all life violates. By “biodiversity equilibrium” we make an analogy to thermodynamics and say that biodiversity is in equilibrium if its marcrosopic state (e.g. richness of species abundance distribution, but not necessarily specific species compositions) is steady, and across arbitrary subsystems, the same steady state applies.
+B.	statistical equilibrium In the context of biodiversity, a description of a steady state arrived at not by the force of one or a few deterministic mechanisms but by the stationary, statistical behavior of very large collections of mechanistic drivers acting on large assemblages of organisms.
+C.	Neutral and statistical theories in ecology focus on macroscopic patterns, and equilibrium is presumed to be relevant to those patterns. Our goal throughout is not to validate neutral or statistical theories—quite the opposite, we propose new data dimensions, namely genetics, to help better test alternative hypotheses against these null theories, thereby gaining insight into what non-neutral and non-statistical mechanisms are at play in systems of interest.
+D.	The unified neutral theory of biodiversity (UNTB; (Hubbell, 2001)) is a useful null because it assumes that one mechanism—demographic drift—drives community assembly. Equilibrium occurs when homogeneous stochastic processes of birth, death, speciation and immigration have reached stationarity. Thus neutrality in ecology is analogous to neutral drift in population genetics (Hubbell, 2001).
+E.	Rather than assuming any one mechanism dominates the assembly of populations into a community, statistical theories assume all mechanisms could be valid, but their unique influences have been lost to the enormity of the system and thus the outcome of assembly is a community in statistical equilibrium (Harte, 2011; Pueyo et al., 2007). The mechanistic agnosticism is what makes statistical theories useful nulls. These statistical theories are also consistent with niche-based equilibria (Neill et al., 2009; Pueyo et al., 2007) if the complicated, individual or population level models with many mechanistic drivers were to be upscaled to entire communities.
+-->
+
+<!--
+
+How do we get to 
+
+* focus on macroscopic properties
+* macroscopic properties assumed to converge to some form of _statistical_ equilibrium
+* _deviations_ from statistical equilibrium may be symptomatic of perturbations that temporarily overwhelm the enormity-of-the-system
+
+
+-->
+
+### Statistical null models for complex eco-evolutionary systems
+<!-- we can have some feelings about "complex systems" :sparkles: but I like it here - targeting a non-CS audience who needs to be sold on statistical nulls --> 
+
+Eco-evolutionary systems are intrinsically complex systems, in the sense that they are made up of numerous components (genes, individuals, species) interacting via a multitude of interrelated, often stochastic and/or nonlinear, pathways. Rather than attempting to model and predict the behavior of these systems in exacting mechanistic detail (e.g. the exact population dynamics of individual species), it is therefore often pragmatic to focus instead on the emergent, macroscopic properties of these systems (such as the distribution of abundance among all species <!-- or popgen equivalent-->). 
+
+The macroscopic focus is especially promising for understanding how major disturbances propagate through complex eco-evolutionary systems. <!-- because it is a natural stage for equilibrium/disequilibrium -->.
+
 
 \newpage
 
