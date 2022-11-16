@@ -1,0 +1,58 @@
+---
+title: "EENS sections"
+author: "RMD"
+date: "2022-11-16"
+output: 
+    pdf_document:
+        toc: true
+---
+
+<!-- The topic sentences in the outline could make for a reasonable abstract/introduction. Using them here as scaffolding for individual sections, then will re-synthesize at the end. --> 
+
+# Linking null models in evolution and ecology with next generation sequencing data to illuminate non-equilibrium dynamics of biodiversity
+
+<!-- @isaac, andy is NGS vs high-throughput more inclusive? --> 
+
+
+
+\newpage
+
+##	As biologists, we are tasked with understanding and predicting how ecological/evolutionary systems change over time, especially in an era of dramatic changes to biodiversity.
+
+<!-- The consequences of non-equilibrium dynamics for biodiversity are not well understood and the need to understand them is critical with anthropogenic pressures forcing biodiversity into states of rapid transition (Blonder et al., 2015). Non-equilibrial processes could profoundly inform conservation in ways only just beginning to be explored (Wallington et al., 2005).-->
+
+Particularly in the current era of dramatic and often unprecedented disturbances to ecological and evolutionary processes, one of the key objectives for biodiversity scientists is to understand and predict how eco-evolutionary systems respond to perturbations. <!-- revisit this after the rest is done because there are many directions this para. can go and it just needs to plug in to *this* ms -->
+
+
+\newpage
+
+##	Enormity-of-the-system/statistical equilibrium argument for focusing on deviations from statistical null models
+
+
+\newpage
+
+##	Efforts to apply this approach in ecology have been intriguing, but constrained by 1) too few comparison/evaluation points 2) the scarcity of historical data 
+\newpage
+
+##	Incorporating population genetics with ecological patterns would 1) provide an additional point for inference and 2) specifically a point of inference that encodes information about past dynamics.
+\newpage
+
+##	This approach shows promise but has been constrained by 1) a lack of quantitative theoretical work integrating null models of popgen and ecology, 2) a lack of widely-available joint community genetics-and-abundance data to ground theoretical work. 
+\newpage
+
+##	Both of these are addressed by recent advances: 1) the double-neutral line of MESS thinking and 2) wetlab and bioinformatic technologies for NGS. 
+\newpage
+
+##	Here we illustrate how joint neutral modeling of popgen and ecological dynamics can illuminate the past and future trajectories of eco-evolutionary systems as they move away from and towards macroscopic equilibrium. 
+\newpage
+
+###	Present a theoretical framework for interpreting deviations from macroscopic equilibrium 
+\newpage
+
+###	Simulations demonstrating how specific scenarios map on to the expectations of this framework
+\newpage
+
+###	Demonstration of bioinformatic advances for plugging real-world data into this framework
+\newpage
+
+##	Call for continued work/signaling of next steps using community genetics data and double-neutral modeling to understand and predict trajectories of eco-evolutionary change.
