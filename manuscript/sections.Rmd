@@ -2,16 +2,16 @@
 title: "EENS sections"
 author: "RMD"
 date: "2022-11-16"
-output: 
+output:
     pdf_document:
         toc: true
 ---
 
-<!-- The topic sentences in the outline could make for a reasonable abstract/introduction. Using them here as scaffolding for individual sections, then will re-synthesize at the end. --> 
+<!-- The topic sentences in the outline could make for a reasonable abstract/introduction. Using them here as scaffolding for individual sections, then will re-synthesize at the end. -->
 
 # Linking null models in evolution and ecology with next generation sequencing data to illuminate non-equilibrium dynamics of biodiversity
 
-<!-- @isaac, andy is NGS vs high-throughput more inclusive? --> 
+<!-- @isaac, andy is NGS vs high-throughput more inclusive? -->
 
 
 
@@ -26,8 +26,6 @@ Particularly in the current era of dramatic and often unprecedented disturbances
 
 \newpage
 
-##	Enormity-of-the-system/statistical equilibrium argument for focusing on deviations from statistical null models
-
 <!--A.	equilibrium Equilibrium is often reserved for systems in thermodynamic equilibrium— which all life violates. By “biodiversity equilibrium” we make an analogy to thermodynamics and say that biodiversity is in equilibrium if its marcrosopic state (e.g. richness of species abundance distribution, but not necessarily specific species compositions) is steady, and across arbitrary subsystems, the same steady state applies.
 B.	statistical equilibrium In the context of biodiversity, a description of a steady state arrived at not by the force of one or a few deterministic mechanisms but by the stationary, statistical behavior of very large collections of mechanistic drivers acting on large assemblages of organisms.
 C.	Neutral and statistical theories in ecology focus on macroscopic patterns, and equilibrium is presumed to be relevant to those patterns. Our goal throughout is not to validate neutral or statistical theories—quite the opposite, we propose new data dimensions, namely genetics, to help better test alternative hypotheses against these null theories, thereby gaining insight into what non-neutral and non-statistical mechanisms are at play in systems of interest.
@@ -37,7 +35,7 @@ E.	Rather than assuming any one mechanism dominates the assembly of populations 
 
 <!--
 
-How do we get to 
+How do we get to
 
 * focus on macroscopic properties
 * macroscopic properties assumed to converge to some form of _statistical_ equilibrium
@@ -47,31 +45,27 @@ How do we get to
 -->
 
 ### Statistical null models for complex eco-evolutionary systems
-<!-- we can have some feelings about "complex systems" :sparkles: but I like it here - targeting a non-CS audience who needs to be sold on statistical nulls --> 
+<!-- we can have some feelings about "complex systems" :sparkles: but I like it here - targeting a non-CS audience who needs to be sold on statistical nulls -->
 
-Eco-evolutionary systems are intrinsically complex systems, in the sense that they are made up of numerous components (genes, individuals, species) interacting via a multitude of interrelated, often stochastic and/or nonlinear, pathways. Rather than attempting to model and predict the behavior of these systems in exacting mechanistic detail (e.g. the exact population dynamics of individual species), it is therefore often pragmatic to focus instead on the emergent, macroscopic properties of these systems (such as the distribution of abundance among all species <!-- or popgen equivalent-->). 
+Eco-evolutionary systems are intrinsically complex systems, in the sense that they are made up of numerous components (genes, individuals, species) interacting via a multitude of interrelated, often stochastic and/or nonlinear, pathways. Rather than attempting to model and predict the behavior of these systems in exacting mechanistic detail (e.g. the exact population dynamics of individual species), it is therefore often pragmatic to focus instead on the emergent, macroscopic properties of these systems (such as the distribution of abundance among all species <!-- or popgen equivalent-->).
 
-The macroscopic focus is especially promising for understanding how major disturbances propagate through complex eco-evolutionary systems. <!-- because it is a natural stage for equilibrium/disequilibrium -->.
+The macroscopic focus is especially promising for understanding how disturbances affect eco-evolutionary systems. Macroscopic properties tend to be relatively insensitive to minor changes at lower levels of organization, due in part to the phenomenon of _staistical equilibrium_. In complex systems in general, when a large number of random processes combine to generate a phenomenon (such as the shape of the species abundance distribution), the fine-scale details of these processes can smooth or cancel each other out and result in consistent, predictable macroscopic outcomes that converge with the outcomes that emerge from simple null models. Through statistical averaging, these macroscopic phenomena are relatively insensitive to subtle variations or perturbations at lower levels of organization. However, a sufficiently strong perturbation can temporarily overwhelm statistical equilbrium and produce macroscopic outcomes that deviate from the expectations of statistical null models. These deviations can be used to detect and diagnose strong perturbations operating in complex systems. This conceptual framework is the foundation of, for example, applications of the principle of maximum entropy in statistical mechanics.
 
 
+Efforts to use deviations from statistical null theories in ecology and evolution have demonstrated that this is a useful approach. Rather than assuming any one mechanism dominates the assembly of populations into a community, these theories assume all mechanisms could be valid, but their unique influences have been lost to the enormity of the system and thus the outcome of assembly is a community in statistical equilibrium (Harte, 2011; Pueyo et al., 2007). The mechanistic agnosticism is what makes statistical theories useful nulls. These statistical theories are also consistent with niche-based equilibria (Neill et al., 2009; Pueyo et al., 2007) if the complicated, individual or population level models with many mechanistic drivers were to be upscaled to entire communities. In ecology, the Maximum Entropy Theory of Ecology (METE) has been shown to successfully predict the shape of numerous macroscopic distributions given only a restricted set of "state variables" (species richness, total abundance, and optionally total metabolic flux) and minimal assumptions about ecological process. In contrast, systems that have recently undergone major disturbances - such as forests that have been clear-cut, or oceanic island communities that have only recently emerged - deviate markedly from the statistical null expectations derived from METE. In population genetics, deviations from neutral genetic drift are routinely used to detect and diagnose disturbances such as population bottlenecks.
+
+Historically, applications of statistical equilibrium in ecology and evolution have proceeded separately - i.e. the fields of macroecology () and population genetics <!-- surely there is a better term for neutral popgen? @isaac? --> - but integrating ecological and evolutionary statistical nulls can provide new insights not possible through focusing on either of these phenomena separately <!-- i hate it -->. While macroecology has revealed several ecological patterns that have provided useful insight into general processes and the importance of statistical nulls in ecology, it has become increasingly clear that the patterns traditionally entertained in macroecology do not, on their own, contain sufficient information to distinguish among competing hypotheses. In particular, macroecology has largely adopted a time-averaged perspective that is not capable of accounting for temporal or historical dynamics. Incorporating population genetics with macroecology would provide additional data dimensions for statistical inference, and would provide a *historical* perspective that is critical for understanding how past disturbances influence contemporary patterns. On the other hand, ecological population genetics has historically focused on the dynamics of a single focal species or population, and only indirectly incorporated larger scale processes <!--I am sure this is wrong, @isaac or @andy help!!!-->.
+
+##	This approach shows promise but has been constrained by 1) a lack of quantitative theoretical work integrating null models of popgen and ecology, 2) a lack of widely-available joint community genetics-and-abundance data to ground theoretical work.
 \newpage
 
-##	Efforts to apply this approach in ecology have been intriguing, but constrained by 1) too few comparison/evaluation points 2) the scarcity of historical data 
+##	Both of these are addressed by recent advances: 1) the double-neutral line of MESS thinking and 2) wetlab and bioinformatic technologies for NGS.
 \newpage
 
-##	Incorporating population genetics with ecological patterns would 1) provide an additional point for inference and 2) specifically a point of inference that encodes information about past dynamics.
+##	Here we illustrate how joint neutral modeling of popgen and ecological dynamics can illuminate the past and future trajectories of eco-evolutionary systems as they move away from and towards macroscopic equilibrium.
 \newpage
 
-##	This approach shows promise but has been constrained by 1) a lack of quantitative theoretical work integrating null models of popgen and ecology, 2) a lack of widely-available joint community genetics-and-abundance data to ground theoretical work. 
-\newpage
-
-##	Both of these are addressed by recent advances: 1) the double-neutral line of MESS thinking and 2) wetlab and bioinformatic technologies for NGS. 
-\newpage
-
-##	Here we illustrate how joint neutral modeling of popgen and ecological dynamics can illuminate the past and future trajectories of eco-evolutionary systems as they move away from and towards macroscopic equilibrium. 
-\newpage
-
-###	Present a theoretical framework for interpreting deviations from macroscopic equilibrium 
+###	Present a theoretical framework for interpreting deviations from macroscopic equilibrium
 \newpage
 
 ###	Simulations demonstrating how specific scenarios map on to the expectations of this framework
