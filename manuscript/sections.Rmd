@@ -1,53 +1,16 @@
 ---
 title: "EENS sections"
-author: "RMD"
-date: "2022-11-16"
 output:
     pdf_document:
-        toc: true
+        toc: false
 ---
 
-<!-- The topic sentences in the outline could make for a reasonable abstract/introduction. Using them here as scaffolding for individual sections, then will re-synthesize at the end. -->
 
 # Linking null models in evolution and ecology with next generation sequencing data to illuminate non-equilibrium dynamics of biodiversity
 
-<!-- @isaac, andy is NGS vs high-throughput more inclusive? -->
+### Introduction
 
-
-
-\newpage
-
-##	As biologists, we are tasked with understanding and predicting how ecological/evolutionary systems change over time, especially in an era of dramatic changes to biodiversity.
-
-<!-- The consequences of non-equilibrium dynamics for biodiversity are not well understood and the need to understand them is critical with anthropogenic pressures forcing biodiversity into states of rapid transition (Blonder et al., 2015). Non-equilibrial processes could profoundly inform conservation in ways only just beginning to be explored (Wallington et al., 2005).-->
-
-Particularly in the current era of dramatic and often unprecedented disturbances to ecological and evolutionary processes, one of the key objectives for biodiversity scientists is to understand and predict how eco-evolutionary systems respond to perturbations. <!-- revisit this after the rest is done because there are many directions this para. can go and it just needs to plug in to *this* ms -->
-
-
-\newpage
-
-<!--A.	equilibrium Equilibrium is often reserved for systems in thermodynamic equilibrium— which all life violates. By “biodiversity equilibrium” we make an analogy to thermodynamics and say that biodiversity is in equilibrium if its marcrosopic state (e.g. richness of species abundance distribution, but not necessarily specific species compositions) is steady, and across arbitrary subsystems, the same steady state applies.
-B.	statistical equilibrium In the context of biodiversity, a description of a steady state arrived at not by the force of one or a few deterministic mechanisms but by the stationary, statistical behavior of very large collections of mechanistic drivers acting on large assemblages of organisms.
-C.	Neutral and statistical theories in ecology focus on macroscopic patterns, and equilibrium is presumed to be relevant to those patterns. Our goal throughout is not to validate neutral or statistical theories—quite the opposite, we propose new data dimensions, namely genetics, to help better test alternative hypotheses against these null theories, thereby gaining insight into what non-neutral and non-statistical mechanisms are at play in systems of interest.
-D.	The unified neutral theory of biodiversity (UNTB; (Hubbell, 2001)) is a useful null because it assumes that one mechanism—demographic drift—drives community assembly. Equilibrium occurs when homogeneous stochastic processes of birth, death, speciation and immigration have reached stationarity. Thus neutrality in ecology is analogous to neutral drift in population genetics (Hubbell, 2001).
-E.	Rather than assuming any one mechanism dominates the assembly of populations into a community, statistical theories assume all mechanisms could be valid, but their unique influences have been lost to the enormity of the system and thus the outcome of assembly is a community in statistical equilibrium (Harte, 2011; Pueyo et al., 2007). The mechanistic agnosticism is what makes statistical theories useful nulls. These statistical theories are also consistent with niche-based equilibria (Neill et al., 2009; Pueyo et al., 2007) if the complicated, individual or population level models with many mechanistic drivers were to be upscaled to entire communities.
--->
-
-<!--
-
-How do we get to
-
-* focus on macroscopic properties
-* macroscopic properties assumed to converge to some form of _statistical_ equilibrium
-* _deviations_ from statistical equilibrium may be symptomatic of perturbations that temporarily overwhelm the enormity-of-the-system
-
-
--->
-
-### Statistical null models for complex eco-evolutionary systems
-<!-- we can have some feelings about "complex systems" :sparkles: but I like it here - targeting a non-CS audience who needs to be sold on statistical nulls -->
-
-Eco-evolutionary systems are intrinsically complex systems, in the sense that they are made up of numerous components (genes, individuals, species) interacting via a multitude of interrelated, often stochastic and/or nonlinear, pathways. Rather than attempting to model and predict the behavior of these systems in exacting mechanistic detail (e.g. the exact population dynamics of individual species), it is therefore often pragmatic to focus instead on the emergent, macroscopic properties of these systems (such as the distribution of abundance among all species <!-- or popgen equivalent-->).
+Particularly in the current era of dramatic and often unprecedented disturbances to ecological and evolutionary processes, one of the key objectives for biodiversity scientists is to understand and predict how eco-evolutionary systems respond to perturbations. Eco-evolutionary systems are intrinsically complex systems, in the sense that they are made up of numerous components (genes, individuals, species) interacting via a multitude of interrelated, often stochastic and/or nonlinear, pathways. Rather than attempting to model and predict the behavior of these systems in exacting mechanistic detail (e.g. the exact population dynamics of individual species), it is therefore often pragmatic to focus instead on the emergent, macroscopic properties of these systems (such as the distribution of abundance among all species <!-- or popgen equivalent-->).
 
 The macroscopic focus is especially promising for understanding how disturbances affect eco-evolutionary systems. Macroscopic properties tend to be relatively insensitive to minor changes at lower levels of organization, due in part to the phenomenon of _staistical equilibrium_. In complex systems in general, when a large number of random processes combine to generate a phenomenon (such as the shape of the species abundance distribution), the fine-scale details of these processes can smooth or cancel each other out and result in consistent, predictable macroscopic outcomes that converge with the outcomes that emerge from simple null models. Through statistical averaging, these macroscopic phenomena are relatively insensitive to subtle variations or perturbations at lower levels of organization. However, a sufficiently strong perturbation can temporarily overwhelm statistical equilbrium and produce macroscopic outcomes that deviate from the expectations of statistical null models. These deviations can be used to detect and diagnose strong perturbations operating in complex systems. This conceptual framework is the foundation of, for example, applications of the principle of maximum entropy in statistical mechanics.
 
@@ -59,3 +22,35 @@ Historically, applications of statistical equilibrium in ecology and evolution h
 So far, progress towards integrating statistical null models in macroecology with community genetics has shown promise (...) but has been largely constrained by the lack of a unified theoretical framework for population genetic and macroecological patterns, on one hand, and the lack of empirical data incorporating both organismal abundance and community genetic data, on the other. In the absence of a quantitative framework linking macroecological and population genetic dynamics, the field has instead used retroactive modifications to macroecological models () or explored qualitative hypotheses about the co-variation of, for example, species and genetic diversity (). However, recent advances in simulation modeling of _joint_ ecological and evolutionary processes open up new ground for developing and testing rigorous predictions for how various types of equilibrial and non-equilibrial dynamics are expected to manifest at _both_ organismal and genetic levels (...). Simultaneously, next-generation sequencing technologies will soon make it economical and efficient to collect community-wide genetic data to complement organismal abundance data. The data produced via these methods are naturally suited to testing theoretical predictions for joint genetic and community dynamics, and can provide inferential leverage for diagnosing present and past non-equilibral processes not discernible using present approaches.
 
 Here, we illustrate how statistical null models of joint population genetic and ecological dynamics, coupled with community genetic sequencing data, can illuminate historical and contemporary trajectories of eco-evolutionary systems. We present a theoretical framework for interpreting deviations from statistical equilibrium at ecological and/or population genetic levels, and use simulation models to demonstrate how different scenarios of non-equilibrial dynamics fit into this framework. We demonstrate using this framework with empirical data on species' abundances and genetic diversity, and illustrate a prospective bioinformatic pipeline for applying this framework to next-generation sequencing data. We hope that these theoretical and methodological advances will inspire future steps integrating community genetic sequencing with statistical null models to understand and predict trajectories of ecological and evolutionary change in the Anthropocene. 
+
+### Disturbances and deviation from statistical equilibrium
+
+Ecosystems experience regular disturbances and subsequent periods of re-organization, which can occur on ecological time-scales, such as primary succession, or evolutionary time scales, such as evolution of novel innovations that lead to new ecosystem processes (Erwin, 2008). We hypothesize that these regular disturbances can lead to periods or even    cycles of non-equilibrium in observed biodiversity patterns. We illustrate these scenarios in the phase space of equilibrium and non-equilibrium states shown in Figure 1. Some scenarios, including a complete cycle through all four phases, cannot be observed without a time machine, but by using  community-level genetic data to examine deviations from ecological and evolutionary statistical null models, we can identify where in this space a focal system is located and use this to infer its past and future dynamics. 
+
+#### Explanation of states and transitions in Figure 1
+
+##### Phase I: 
+
+##### Phase II:
+
+##### Phase III:
+
+##### Phase IV:
+
+##### Cycles between the phases
+
+#### Simulations
+
+Simulation modeling of equilibiral and perturbed eco-evolutionary dynamics allows us to develop quantitative versions of the qualitative dynamics described in Figure 1. Here, we use simulation models to illustrate transitions between Phases X and Y.
+
+##### Simulation modeling methods
+
+##### Results of sims
+
+### Leveraging next-generation sequencing data 
+
+The theoretical framework presented here uses joint data on community-wide genetic structure and species' relative abundances. While such datasets are relatively rare in the literature at present, emerging technologies for community metabarcoding will soon make it logisically tractable and economical to collect wide-scale data of exactly this type. 
+
+One major barrier to using joint community genetic and species abundance data derived from metabarcoding is the challenge of estimating species' abundances - rather than simply presence/absence - from metabarcoding data. One solution to this is to conduct organismal surveys associated with genetic data sampling, to either wholly substitute or simply ground-truth abundances estimated from genetic data. Here we present a second option: using model-free abundance estimation to retrive species' abundances from genetic data. 
+
+Specifically, [model-free abundance estimation supplement]. We propose a pipeline (Fig. I) where raw reads are generated and assembled into a phylogeny using standard approaches, and potentially aided by additionally available sequence data in a super tree or super matrix approach. The numbers of sequences assigned to each terminal tip are then used in a Bayesian hierarchical model which seeks to estimate the true number of organisms representing each terminal tip, accounting for sequencing biases originating from, e.g. primer affinity and copy number differences between taxa. Information on phylogenetic relatedness can inform modeled correlations in biases between taxa (Angly et al., 2014); e.g. copy number is known to be phylogenetically conserved at least in microbes). This approach is particularly tailored to metabarcoding data. In a potentially powerful extension, and thanks to the proposed Bayesian framework, information from sequencing experiments that seek to calibrate metabarcoding studies (e.g., (Krehenwinkel et al., 2017)) can be used to build meaningfully informative priors and improve model accuracy. Through a simulation study (described in the supplement) we show that true underlying abundances can be accurately estimated (Fig. II).
