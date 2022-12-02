@@ -31,13 +31,27 @@ Ecosystems experience regular disturbances and subsequent periods of re-organiza
 
 ##### Phase I: 
 
+Both ecological and population genetic patterns conform to expectations from statistical null models, reflecting systems in (some degree of) an equilibrial state where no strong process overwhelms statistical equilibrium.
+
+Strong, rapid ecological distrubance could drive ecological metrics away from equilibrium, to Phase II. 
+
 ##### Phase II:
+
+Ecological metrics diverge from statistical nulls, but population genetic metrics do not - perhaps reflecting a rapid, recent ecological disturbance.
+
+Following disturbance, the system could potentially relax back to equilibrium on the ecological scale (i.e. returning to Phase I). Alternatively, the disruption to ecological dynamics could spur evolutionary change driving both ecological and evolutionary patterns away from equilibrium, to Phase III.
 
 ##### Phase III:
 
+Both ecological and population genetic metrics diverge from statistical nulls, suggesting significant disruption to both ecological and evolutionary dynamics.  
+
+In this phase, evolutionary change may provide innovations such that *ecological* metrics can relax back to equilibrium, moving to Panel IV. 
+
 ##### Phase IV:
 
-##### Cycles between the phases
+In Phase IV, ecological metrics approximate equilibrium, but population genetic metrics remain perturbed away from statistical equilibrium. This perhaps reflects a past disturbance that has been "forgotten" on an ecological level but remains detectable at the population genetic scale. For example, following a population bottleneck, species' populations may bounce back to pre-disturbance levels more quickly than population genetic structure. 
+
+Eventually, the population genetic disequilibrium of Phase IV is expected to relax back to Phase I.
 
 #### Simulations
 
